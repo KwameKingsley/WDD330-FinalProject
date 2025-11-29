@@ -1,0 +1,26 @@
+{
+  "name": "wdd330-finalproject",
+  "version": "1.0.0",
+  "description": "A scripture reminder app focused on the Book of Mormon.",
+  "main": "index.js",
+  "scripts": {
+    "start": "netlify dev",
+    "lint": "eslint",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KwameKingsley/WDD330-FinalProject.git"
+  },
+  "keywords": [],
+  "author": "Kingsley Kwarteng",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/KwameKingsley/WDD330-FinalProject/issues"
+  },
+  "homepage": "https://github.com/KwameKingsley/WDD330-FinalProject#readme",
+  "devDependencies": {
+    "netlify-cli": "^23.12.2"
+  }
+}

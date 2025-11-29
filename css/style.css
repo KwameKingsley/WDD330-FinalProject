@@ -1,0 +1,39 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #f9f7f3;
+    color: #333;
+}
+
+header,
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: #0c3b2e;
+    color: white;
+}
+
+nav a {
+    margin: 0 1rem;
+    color: white;
+    text-decoration: none;
+}
+
+.daily-quote {
+    text-align: center;
+    padding: 2rem;
+}
+
+.fade {
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
