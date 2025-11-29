@@ -1,9 +1,17 @@
-import { getApostleQuote } from "./api/quotesApi.js";
-const quoteBox = document.getElementById("quoteBox");
-const newQuoteBtn = document.getElementById("newQuoteBtn");
+import { getScripture } from "./api/scripture.js";
+import { getApostleQuote } from "./api/quotes.js";
+document.addEventListener("DOMContentLoaded", async () => {
+    loadScripture();
+    loadQuote();
+});
+async function loadScripture() {
+    const scripture = await getScripture();
+    document.querySelector("#scriptureRef").textContent = scripture.reference;
+    document.querySelector("#scriptureText").textContent =
+        scripture.text.substring(0, 500) + "...";
+}
 async function loadQuote() {
     const quote = await getApostleQuote();
-    quoteBox.innerHTML = `"${quote.content}" – ${quote.author}`;
+    document.querySelector("#quoteText").textContent = quote.quote;
+    document.querySelector("#quoteAuthor").textContent = quote.author;
 }
-newQuoteBtn.addEventListener("click", loadQuote);
-loadQuote();

@@ -1,11 +1,6 @@
-import { getApostleQuote } from "./api/quotesApi.js";
-const list = document.getElementById("quotesList");
-async function loadQuotes() {
-    for (let i = 0; i < 5; i++) {
-        const q = await getApostleQuote();
-        const block = document.createElement("blockquote");
-        block.textContent = `"${q.content}" – ${q.author}`;
-        list.appendChild(block);
-    }
-}
-loadQuotes();
+import { getApostleQuote } from "./api/quotes.js";
+document.addEventListener("DOMContentLoaded", async () => {
+    const q = await getApostleQuote();
+    document.querySelector("#quote-text").textContent = q.content;
+    document.querySelector("#quote-author").textContent = q.author;
+});

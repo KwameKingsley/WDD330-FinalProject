@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Book of Mormon Reminder App</title>
     <link rel="stylesheet" href="css/style.css" />
-    <script type="module" src="js/main.js" defer></script>
+    <script type="module" src="./js/main.js"></script>
 </head>
 
 <body>
@@ -19,10 +19,15 @@
         </nav>
     </header>
     <main>
-        <section class="daily-quote">
-            <h2>Today's Book of Mormon Quote</h2>
-            <div id="quoteBox" class="fade"></div>
-            <button id="newQuoteBtn">New Quote</button>
+        <section class="card">
+            <h2>Daily Book of Mormon Scripture</h2>
+            <p id="scriptureText"></p>
+            <p><strong id="scriptureRef"></strong></p>
+        </section>
+        <section class="card">
+            <h2>Apostle Quote</h2>
+            <p id="quoteText"></p>
+            <p><strong id="quoteAuthor"></strong></p>
         </section>
     </main>
     <footer>
