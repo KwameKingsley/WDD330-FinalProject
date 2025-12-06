@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Book of Mormon Reminder App</title>
+    <title>Book of Mormon Daily Reminder</title>
     <link rel="stylesheet" href="css/style.css" />
-    <script type="module" src="./js/main.js"></script>
+    <script type="module" src="./js/main.js" defer></script>
 </head>
 
 <body>
@@ -15,19 +15,33 @@
         <nav>
             <a href="reading.html">Read</a>
             <a href="quotes.html">Quotes</a>
-            <a href="settings.html">Settings</a>
         </nav>
     </header>
     <main>
         <section class="card">
             <h2>Daily Book of Mormon Scripture</h2>
-            <p id="scriptureText"></p>
+            <p id="scriptureText">Loading scripture...</p>
             <p><strong id="scriptureRef"></strong></p>
         </section>
+
         <section class="card">
             <h2>Apostle Quote</h2>
-            <p id="quoteText"></p>
+            <p id="quoteText">Loading quote...</p>
             <p><strong id="quoteAuthor"></strong></p>
+        </section>
+
+        <section class="card motivational-card">
+            <h3>Daily Motivation</h3>
+            <div id="motivationalMessage">
+                Loading motivation...
+            </div>
+        </section>
+
+        <section class="card" id="progress-summary">
+            <h2>Your Reading Progress</h2>
+            <p>Chapters Completed: <span id="chaptersCompleted">0</span></p>
+            <p>Current Streak: <strong id="currentStreak">0 days</strong></p>
+            <p>Overall Progress: <span id="overallProgress">0%</span></p>
         </section>
     </main>
     <footer>
